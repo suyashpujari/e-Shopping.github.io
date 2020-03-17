@@ -1,0 +1,162 @@
+<html>
+<head>
+<style>
+*{
+	box-sizing:border-box;
+ }
+ .column{
+			float:left;
+			padding:10px;
+			width:50%;
+			
+ }
+ .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+img {
+    display: block;
+    width: 300px;
+    height: 300px;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  cursor: pointer;
+}
+
+#text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: #ff8080;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+</style>
+</head>
+<body>
+<h1 style="color:#988048;"align="center">Welcome to Men's fashion</h1>
+<div class="row" >
+	<div class="column" >
+		<div class="card" >
+			<img src="handi.jpg" alt="Denim Jeans" style="width:100%">
+			<h1>Decorative Vessel</h1>
+			<p class="price">Rs 699/-</p>
+			
+			<div id="overlay" onclick="off()">
+			<div  class="col"id="text">Your Product Is Added To Cart</div>
+			</div>
+			<div id="overlay" onclick="off()"></div>
+			<p><button onclick="on()">Add to Cart</button></p>
+		</div>
+	</div>
+
+	<div class="column">
+		<div class="card">
+			<img src="mini.jpg" alt="trousers" style="width:100%">
+			<h1>Mini Table Fountain</h1>
+			<p class="price">Rs 599/-</p>
+			
+			<div id="overlay" onclick="off()">
+			<div  class="col"id="text">Your Product Is Added To Cart</div>
+			</div>
+			<div id="overlay" onclick="off()"></div>
+			<p><button onclick="on()">Add to Cart</button></p>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="column">
+		<div class="card"> 
+			<img src="sticker.jpg" alt="shirts" style="width:100%">
+			<h1>Beautiful Peacock Wallpaper</h1>
+			<p class="price">Rs 499/-</p>
+			
+			<div id="overlay" onclick="off()">
+			<div  class="col"id="text">Your Product Is Added To Cart</div>
+			</div>
+			<div id="overlay" onclick="off()"></div>
+			<p><button onclick="on()">Add to Cart</button></p>
+		</div>
+	</div>
+
+	<div class="column">
+		<div class="card">
+			<img src="wel.jpg" alt="tshirts" style="width:100%">
+			<h1>Classic Home Board</h1>
+			<p class="price">Rs 399/-</p>
+			
+			<div id="overlay" onclick="off()">
+			<div  class="col"id="text">Your Product Is Added To Cart</div>
+			</div>
+			<div id="overlay" onclick="off()"></div>
+			<p><button onclick="on()">Add to Cart</button></p>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="column">
+		<div class="card"> 
+			<img src="wood.jpg" alt="shirts" style="width:100%">
+			<h1> Handcrafted Wood Ship</h1>
+			<p class="price">Rs 499/-</p>
+			
+			<div id="overlay" onclick="off()">
+			<div  class="col"id="text">Your Product Is Added To Cart</div>
+			</div>
+			<div id="overlay" onclick="off()"></div>
+			<p><button onclick="on()">Add to Cart</button></p>
+		</div>
+	</div>
+</div>	
+<script>
+function on() {
+  document.getElementById("overlay").style.display = "block";
+}
+
+function off() {
+  document.getElementById("overlay").style.display = "none";
+}
+</script>
+
+</body>
+</html>
